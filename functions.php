@@ -113,12 +113,11 @@ function displayAll(){
           <td><?php echo $row1['mobile']?></td>
           <td><?php echo $row1['password']?></td>
           <td><img src="<?php echo $row1['photo'] ?>" height='100px' width='100px'/></td>
-          <td>
-      
+
      <?php echo
       '<td>
       
-    <button class="btn btn-primary"><a href="update.php?updateid='.$id.' " class="text-light">update</a></button>
+    <button class="btn btn-primary"><a href="update.php?updateid='.$id.' " class="text-light">update</a></button></td><td>
     <button class="btn btn-danger"><a href="delete.php?deleteid='.$id.'" class="text-light">Delete</a></button>
   </td>
     </tr>';
