@@ -8,7 +8,7 @@ include "functions.php";
 
 $errorMessage="";
 $successMessage ="";
-// updateRecords();
+updateRecords();
 
   $id=$_GET['updateid'];
     $query = "SELECT * FROM crudnew where id =$id ";
