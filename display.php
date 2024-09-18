@@ -98,6 +98,5 @@ include "functions.php";
   </tbody>
 </table>
     </div>
-    <img src="uploads\<?php echo $row['image']; ?>" alt="">
 </body>
 </html>

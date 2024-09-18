@@ -8,7 +8,20 @@ include "functions.php";
 
 $errorMessage="";
 $successMessage ="";
-updateRecords();
+// updateRecords();
+
+  $id=$_GET['updateid'];
+    $query = "SELECT * FROM crudnew where id =$id ";
+  $result = mysqli_query($connection,$query);
+  if($result){
+    while($rowupdate = mysqli_fetch_assoc($result)){
+        $id= $rowupdate['id'];
+        $username= $rowupdate['username'];
+        $email= $rowupdate['email'];
+        $mobile= $rowupdate['mobile'];
+        $password= $rowupdate['password'];
+        }
+      }
 
 ?>
 
@@ -39,7 +52,7 @@ updateRecords();
     <label for="username" class="form-label">username</label>
     <input type="text" class="form-control" name="username" 
     id="exampleInputEmail1" aria-describedby="emailHelp"  required=""
-     value="<?php echo $username;?>">
+    value="<?php echo $username;?>">
     
   </div>
   <div class="mb-3">

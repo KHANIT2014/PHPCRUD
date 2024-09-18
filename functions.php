@@ -177,15 +177,16 @@ function updateRecords(){
     $query = "SELECT * FROM crudnew where id =$id ";
   $result = mysqli_query($connection,$query);
   if($result){
-    while($row = mysqli_fetch_assoc($result)){
-        $id= $row['id'];
-        $username= $row['username'];
-        $email= $row['email'];
-        $mobile= $row['mobile'];
-        $password= $row['password'];
+    while($rowupdate = mysqli_fetch_assoc($result)){
+        $id= $rowupdate['id'];
+        $username= $rowupdate['username'];
+        $email= $rowupdate['email'];
+        $mobile= $rowupdate['mobile'];
+        $password= $rowupdate['password'];
         }
       }
-
+// The Aboove mentioned code has been updated in update page directly do to some reasons !! you can remove this 
+// code from $id to $password with curly brackets KHAN JAVID
 if(isset($_POST['submit'])){
     $username = $_POST['username'];
     $email = $_POST['email'];
